@@ -1,0 +1,399 @@
+Shopping para MuOnline Autom�tico Vers�o 3.2.4
+
+Vers�o compativel com servidores antigos e novos.
+Vers�es de 0.97d ate Season 6.3
+
+Suporte de escolha no ato da compra de um item:
+ - Level
+ - Option (adicional)
+ - Ancient
+ - Skill
+ - Luck
+ - Op��es Excelentes
+ - Op��es Harmony
+ - Op��es Level 380 (Refine)
+ - Op��es de Sockets
+
+
+�rea do cliente:
+�������-
+Sistema de login: 100% (Com captcha / ajax)
+
+Mostrar Saldo de cash: 100%
+
+Inicio: 100%
+
+Produtos: 100% (Ajax)
+ - Nas categorias:
+   --- Promo��es  
+   --- Todos os Itens
+   --- Kits
+   - Defesa
+   --- Helms
+   --- Pants
+   --- Gloves
+   --- Boots
+   --- Armors
+   --- Shields
+   --- Pendants
+   --- Rings
+   --- Wings
+   - Ataque
+   --- Axes
+   --- Bows
+   --- Crossbows
+   --- Maces
+   --- Scepters
+   --- Spears
+   --- Staffs
+   --- Swords
+   - Outros
+   --- Amulets
+   --- Castel Siege
+   --- Events
+   --- Events MIX
+   --- Gifts/Boxs
+   --- Guards/Pets  
+   --- Jewels
+   --- Jewels MIX
+   --- Mix Items
+   --- Mix Pets
+   --- New/Test
+   --- Potions
+   --- Quests
+   --- Orbs  
+   --- Scrolls 
+
+Cupom de desconto: 100% (Ajax, Com um codigo de cupom fornecido pela equipe do jogo, o player pode obter um valor em % de desconto em sua compra)
+
+Hist�rico de compras: 100% (itens / kits [com op��o de recuperar item deletado do servidor] / depositos)
+
+Confirmar dep�sitos: 100% (Aceito: Banco Bradesco, Banco Postal, Banco Ita�, Banco do Brasil, Caixa Econ�mica Federal, Lot�rica, Caixa Aqui)
+
+Recuperar item / kit perdido: 100% (Recuperar item / kit deletado do servidor)
+
+Consertar item quebrado: 100% (Consertar durabilidade de itens que n�o s�o consertados no jogo)
+
+Sobre o shopping: 100%
+
+
+�rea da administra��o:
+----------------------
+Produtos [Gerenciar]: (Gerenciador de cadastro de itens / kits)
+
+Cupons [Gerenciar]: (Gerenciar cupons de descontos)
+
+Logs [Compra de itens]: (Logs de compras de itens)
+ 
+Logs [Compra de kits]: (Logs de compras de kits) 
+
+Pagamentos [Andamento]: (Gerenciador de dep�sitos)
+
+Pagamentos [Concluidos]: (Gerenciador de dep�sitos)
+
+Pagamentos [Rejeitados]: (Gerenciador de dep�sitos)
+
+Relat�rios Financeiros: (Relat�rios financeiros de arrecada��o do shopping)
+
+Gerenciador de Logins: (Permite ver todos os players que est�o visitando o shopping, ver a p�gina que est�o mexendo, permite deslogar o player do shopping e etc)
+
+Buscar Itens (Serial): (Permite voc� busque itens em todo o servidor pelo serial listando onde tem cada copia dele)
+
+
+Como funciona:
+----------------------
+Sistema de vendas sem trocar baus.
+O player entra no site e compra o item e ele vai para o espa�o vago no seu bau. 
+Caso ele n�o tenha espa�o em seu bau, o shopping avisa e pede para ele liberar espa�o suficiente para adicionar o item.
+
+Na hora da instala��o:
+ - O shopping usa um banco de dados pr�-programado com todos os itens at� season 4.0.
+   Esse banco de dados usa como base o DB do MuMaker v1.12 alterado para funcionamento correto do shopping.
+   Esse processo dispensa de voc� ter que ficar digitando codigos na hora de cadastrar o item no shopping causando um desgaste fisico e mental no administrador do servidor pois s�o centenas de itens e consequentemente milhares de codigos poupados.
+
+Shopping ideal para servidores de grande porte que precisam de um �timo shopping para gerenciar suas vendas automatizando todo o processo desde a escolha de itens a entrega de item no jogo.
+
+
+Como comprar:
+----------------------
+Valor do Shopping v3 para todas as vers�es: R$ 700,00 
+
+Telefone para contatos: (31) 8406-9520 / (31) 8693-5000
+Email para contatos: ldaldegam@hotmail.com
+
+
+Fotos:
+----------------------
+
+
+Videos:
+----------------------
+
+
+
+///////////////////////////
+
+28/08/2009
+ - Corrigido nos templates: default / 23920
+   - Fixado o javascript que faz atualiza��o de pre�os ancients. [product_details.php]
+
+05/09/2009
+ - Corrigido erro na leitura de baus nas vers�es velhas. [modules/vault.class.php]
+ - Corrigido erro no consertar item quebrado para os itens que n�o estavam cadastrados no banco de dados. [modules/recover_broken_item.class.php]
+ - Corrigida classe repetida na �rea de gerenciar produtos no painel admin. [admin/modules/products.class.php]
+ - Corrigido op��es nome das excelentes dos pendants, categoria 6:
+   - modules/catalog.class.php
+   - modules/history.class.php
+   - admin/modules/products.class.php
+ - Adicionado op��es excelentes das asas level 3, categoria 7:
+   - modules/catalog.class.php
+   - modules/history.class.php
+   - admin/modules/products.class.php
+ - Adicionada caracteristica que mostra na hora de selecionar o item se ele est� dispon�vel para compras ou n�o. [admin/modules/products.class.php]
+ - Adicionado a op��o de desaticar / ativar vendas de kits no painel admin. [admin/modules/products.class.php]
+
+07/09/2009
+ - Corre��o da durabilidade 1 no consertar item quebrado.  [modules/recover_broken_item.class.php]
+
+06/11/2009
+ - Corrigido op��es nome das excelentes:
+   - modules/catalog.class.php
+   - modules/history.class.php
+   - admin/modules/products.class.php
+
+10/11/2009
+ - Adicionado no settings.php a op��o para alterar no nome da sessao.
+  - index.php
+  - settings.php
+  - modules/captcha.php
+  - admin/index.php
+
+Adicione no settings.php as seguintes linhas:
+
+/*
+    @Nome da sess�o;
+*/
+define("SESSION_NAME_SHOP", "iwuhf98f4fv");
+
+1/12/2009
+ - Alterado o esquema de sockets option
+  - settings.php
+  - modules/sockets.lib.php
+  - modules/item.class.php
+  - modules/history.class.php
+  - admin/modules/logsitems.class.php
+  - admin/modules/logskits.class.php
+  - admin/modules/products.class.php
+
+Adicione no settings.php as seguintes linhas:
+
+/*
+    @ Sistema de socket item.
+    @ Selecione o seu muserver abaixo
+    
+    LEGENDA:
+       
+       0 = Sistema da Webzen original (TNS Games, Diel, Eduardo (welcomevoce, phpnuke))  
+       1 = Sistema da SCF / SCFMT (MuMaker)
+*/
+define("SOCKET_USE_LIB", 0);
+
+9/12/2009
+ - Adicionada checagem de max. options excelentes [finishbuy.class.php]
+ 
+23/12/2009
+ - Fixado o erro da op��o refine na compra de kits. [finishbuykits.class.php]
+
+8/1/2010
+ - Fixada as op��es sockets. [catalog.class.php]
+ - Fixada as op��es sockets. [finishbuykits.class.php]
+ - Fixada os logs das op��es sockets. [finishbuykits.class.php]
+ - Fixada as op��es sockets para SCF / SCFMT (MuMaker) [sockets.lib.php]
+
+11/02/2010
+ - Fixado erro na altera��o de durabilidade do consertar itens. [recover_broken_item.class.php]
+ - Fixado erro de checagem de compra na recupera��o de item. [recover_lost_item.class.php]
+
+09/04/2010
+ - Alterado o sistema de licen�as.
+   * Funcionamento com licen�as multiplas.
+   * A porta do endere�o agora n�o tem influencia sobre a licen�a.
+   * Sistema igual para todos os produtos MuSite, MuShopping e Etc...
+   * Sistema de autentica��o via protocolo http em dois servidores.
+   * Nova linha no settings.php
+	define("countryPreference", 0x01); // Para Brasil 0x01, Estados Unidos da Am�rica 0x02
+   [ Todas as paginas .php foram alteradas para funcionamento do novo sistema. ]
+
+ - Corrigido problema de invas�o no sistema de arquivos (php inject). [index.php / admin/index.php]
+
+15/05/2010
+ - Adicionado um limite global para limitar o numero de vezes que itens vendidos podem ser recuperados. [recover_lost_item.class.php]
+   Adicione no settings.php as seguintes linhas:
+
+/*
+    @ Sistema de recupera��o de itens.
+*/
+define("RECOVERY_LIMIT_ITEM", 0); // Use essa op��o para limitar que todos os itens vendidos possam ser recuperados ate X vezes pelo player. Deixe 0 para ilimitado.
+
+05/07/2010
+ - Corrigido a compra de socket option sem permiss�o. [finishbuy.class.php]
+ - Corrigido a compra de ancient option sem permiss�o. [finishbuy.class.php]
+ - Corrigido a compra de harmony option sem permiss�o. [finishbuy.class.php]
+ - Corrigido a compra de refine option sem permiss�o. [finishbuy.class.php]
+ - Corrigido tamanho final do item. [items.class.php]
+ - Unifica��o do codigo de obfusca��o. [*.php]
+
+02/08/2010
+ - Fixado erro na altera��o de durabilidade do consertar itens (tamperdata). [recover_broken_item.class.php]
+ - Alterado tempo de limite da autentica��o para 2 horas. [index.php]
+ - Alterado sistema de licen�as, agora compativel sem o allow_url_fopen ligado pois usa a biblioteca CURL caso esteja indisponivel a allow_url_fopen. [index.php]
+ - Sistema de licen�as usando cache de 1 hora. (Necess�ria permiss�o de escrita na pasta /licenses/) [index.php]
+   Adicionar no settings.php as linhas:
+	
+	define("autenticationCache", true); // Guarda a chave de seguran�a em cache para n�o fazer requisi��es a cada pagina acessada. 
+
+ - Regulado checagem de loopback apenas para o servidor selecionado. [index.php]
+
+10/09/2010
+ - Colocada nova tabela [ExtWarehouseVirtual] para busca de serial para recuperar item. [recover_lost_item.class.php]
+ - Fixado byte do item ancient level 2. [items.class.php]
+ - Adicionado suporte aos dois tipos de set ancients. [catalog.class.php / history.class.php / product_details.php]
+ - Adicionado suporte a busca de itens para todas as colunas que s�o varbinary na warehouse. [recover_lost_item.class.php / itemfind.class.php]
+ - Adicionado bot�o para mostrar itens de um determinado Kit na pagina de Kits, evitando que ela fique muito grande. [catalog.class.php]
+ - Pagina��o na op��o de confirmar pagamento. [payments.class.php / payments[*].tpl.php]
+ - Prote��o para compras ao mesmo tempo. [finishbuy.class.php, finishbuykits.class.php]
+
+30/09/2010
+ - Colocada nova tabela [ExtWarehouseVirtual] para busca de serial no painel admin. [itemfind.class.php]
+ - Fixado busca de serial no painel admin. [itemfind.class.php]
+ - Inserida trava para n�o permitir comprar sockets repetidos. [finishbuy.class.php]
+   Adicionar no settings.php as linhas:
+	
+	define("LOCK_REPEAT_SOCKET", true); //N�o permitir que sej� vendido item socket com op��es repetidas.
+
+ - Inserida trava para n�o permitir comprar de options excelentes com ancient. [finishbuy.class.php]
+   Adicionar no settings.php as linhas:
+	
+	define("LOCK_ANCIENT_AND_EXCELLENT", false); //N�o permitir que sej� vendido item com op��es excelentes e ancient juntos.
+
+ - Alterada a vers�o para 3.1.4 [index.php]
+
+11/11/2010
+ - Inserida trava para n�o permitir comprar categoria de sockets repetidos. [finishbuy.class.php]
+   Adicionar no settings.php as linhas:
+	
+	define("LOCK_REPEAT_CATEGORIE_SOCKET", false); //N�o permitir que sej� vendido item socket com categorias repetidas.
+
+ - Alterada a vers�o para 3.1.5 [index.php]
+
+12/11/2010
+ - Inserida trava para n�o permitir comprar op��es sockets do mesmo tipo repetidos. [finishbuy.class.php]
+   Adicionar no settings.php as linhas:
+	
+	define("LOCK_REPEAT_SOCKET_TYPE", false); //N�o permitir que sej� vendido item socket com tipos de sockets repetidos.
+
+ - Alterada a vers�o para 3.1.6 [index.php]
+
+
+29/11/2010
+ - Fixado problema de realizar compras sem ter o ba� aberto pelo menos uma vez no jogo. [vault.class.php]
+ - Cadastrada novas classes da vers�o Season 6. [general.class.php, catalog.class.php, products.class.php, odbc.class.php]
+
+ - Inserida trava para n�o permitir comprar op��es socket com harmony. [finishbuy.class.php]
+   Adicionar no settings.php a linha:
+	
+	define("LOCK_SOCKET_AND_HARMONY", false); //N�o permitir que sej� vendido item com op��es sockets e harmony juntos.
+
+ - Colocada trava para n�o deixar o player comprar item com o level acima do permitido [finishbuy.class.php]
+  Adicionar no settings.php a linha:
+	
+	define("LOCK_MAX_LEVEL", 13); //Configure aqui o level m�ximo que um player pode selecionar na hora de comprar um determinado item.
+
+ - Altera��es necess�rias no banco de dados! Acesse a p�gina: update_3.1.6_to_3.1.7.php no navegador!
+
+ - Alterada a vers�o para 3.1.7 [index.php]
+
+22/12/2010
+ - Colocada a op��o do DBVersion ser configuravel [vault.class.php]
+  Adicionar no settings.php as linhas:
+
+/*
+    Exemplo de como configurar a op��o: SYSTEM_DBVERSION
+    //1 = (Vers�es antigas sem personal store), 2 = (Vers�es antigas com personal store), 3 = (Vers�es novas com personal store e harmony)  
+    
+    Para vers�es 97d, use a op��o numero 1;
+    Para vers�es 1.0 use a op��o numero 2; 
+    Para vers�es 1.2n ou acima use a op��o numero 3; 
+*/
+define("SYSTEM_DBVERSION", 1); //1 = (Vers�es antigas sem personal store), 2 = (Vers�es antigas com personal store), 3 = (Vers�es novas com personal store e harmony) 
+
+ - Alterada a vers�o para 3.1.8 [index.php]
+
+11/02/2011
+ - Fixado a op��o de comprar kit (cobrava pelo kit com o player online, e n�o deixava realizar a entrega) [finishbuykits.class.php]
+ - Alterada a vers�o para 3.1.9 [index.php]
+
+15/04/2011
+ - Inserida trava para n�o permitir comprar tipos de sockets repetidos por slot. [finishbuy.class.php]
+  Adicionar no settings.php a linha:
+	
+	define("LOCK_REPEAT_SLOT_SOCKET", true); //N�o permitir que sej� vendido item socket com slots repetidos.
+ - Alterada a vers�o para 3.1.10 [index.php]
+
+22/06/2011
+ - Fixado venda de options harmony para itens +15 [catalog.class.php]
+ - Adicionada trava de options sockets para n�o vender options que n�o s�o compativeis com as categorias correspondentes [finishbuy.class.php]
+ - Adicionada a op��o de deletar logs de compras pelo painel de administra��o. [logskits.class.php / logsitems.class.php]
+ - Alterada a vers�o para 3.1.11 [index.php]
+
+06/07/2011
+ - Fixado trava de options sockets para n�o vender options que n�o s�o compativeis com as categorias correspondentes [finishbuy.class.php]
+ - Fixado erro de variavel na compra de kits. [finishbuykits.class.php]
+ - Alterada a vers�o para 3.1.12 [index.php]
+
+25/07/2011
+ - Removido checagem de loopback devido erro de rotas com o no-ip. [index.php]
+ - Alterada a vers�o para 3.1.13 [index.php]
+ 
+03/08/2011
+ - Fixado erro de seguran�a. [protect.class.php]
+ - Alterada a vers�o para 3.1.14 [index.php]
+
+21/11/2011
+ - Fixado erro na compra de item com harmony. [finishbuy.class.php] 
+ - Alterada a vers�o para 3.1.15 [index.php]
+
+21/01/2012
+ - Adicionada trava de options sockets para n�o vender options que n�o s�o compativeis com as categorias correspondentes [finishbuy.class.php]
+ - Alterada a vers�o para 3.1.16 [index.php]
+
+11/02/2012
+ - Adicionado suporte para vers�o Season 6.3 [vault.class.php]
+ - Alterada a vers�o para 3.2.0 [index.php]
+
+21/04/2012
+ - Colocada trava na sele��o de ancient para evitar ancient n�o suportado. [finishbuy.class.php]
+ - Adicionada trava de seguran�a de tempo no recuperar item perdido de 3 minutos ap�s sair do jogo. [recover_lost_item.class.php]
+ - Alterada a vers�o para 3.2.1 [index.php]
+
+28/04/2012
+ - Adicionada trava de seguran�a de tempo regul�vel no recuperar item perdido ap�s sair do jogo. [recover_lost_item.class.php]
+   Adicionar no settings.php a linha:
+	
+	define("RECOVERY_LIMIT_MIN_TIME", 15); //Tempo m�nimo a ser aguardado com o player offline para recuperar um item no shopping; Tempo recomendado 15 minutos. (Evitar dupers em vers�o com personal store)
+
+ - Alterada a vers�o para 3.2.2 [index.php]
+
+01/07/2012
+ - Adicionado compatibilidade com a vers�o Season 6 Epi 3 da ENC Games. [vault.class.php]
+   Adicionar no settings.php a linha:
+	
+	define("ENCGAMES_S6", true); //Coloque true para vers�o Season 6 Epi 3 da ENC Games
+
+ - Adicionado compatibilidade com a vers�o Season 6 da Titans Tech. [recovery_lost_item.class.php]
+
+ - Alterada a vers�o para 3.2.3 [index.php]
+ 
+04/04/2014
+- Fixado calculo incorreto de espaço nas versões 97d. [vault.class.php]
+- Alterada a versão para 3.2.4 [index.php]
