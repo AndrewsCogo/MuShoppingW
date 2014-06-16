@@ -32,7 +32,8 @@ if ( class_exists( "LogsItems" ) == false ) {
             $lasts = ($_POST['lasts'] < 1 ? 1 : $_POST['lasts']);
             $login = $_POST['login'];
             if(empty($login) == false) $query_p = "and login='". $login ."'";
-            $FindSoldsQuery = $ODBC->query("SELECT TOP ". $lasts ." * FROM LogSolds WHERE type='common' {$query_p} ORDER BY number DESC");
+            $Select = sprintf("SELECT TOP %s * FROM LogSolds WHERE type='common' {$query_p} ORDER BY number DESC", $lasts);
+            $FindSoldsQuery = $ODBC->query($Select);
             while($FindSolds = odbc_fetch_object($FindSoldsQuery))
             {    
                 $IDI++;
@@ -54,25 +55,25 @@ if ( class_exists( "LogsItems" ) == false ) {
                                 <em>Serial</em>: <strong>". $FindSolds->serial ."</strong><br />\n
                                 <em>Level</em>: <strong>+". $FindSolds->level ."</strong> | \n
                                 <em>Option (adcional)</em>: <strong>+". ($FindSolds->option*4) ."</strong><br />\n
-                                <em>Luck</em>: <strong>". ($FindSolds->luck == "true" ? "Sim" : "Não") ."</strong> | \n
-                                <em>Skill</em>: <strong>". ($FindSolds->skill == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>Ancient</em>: <strong>". ($FindSolds->ancient == 0 ? "Não" : "").($FindSolds->ancient == 1 ? "+5 Stamina" : "").($FindSolds->ancient == 2 ? "+10 Stamina" : "") ."</strong><br />\n
+                                <em>Luck</em>: <strong>". ($FindSolds->luck == "true" ? "Sim" : "Nï¿½o") ."</strong> | \n
+                                <em>Skill</em>: <strong>". ($FindSolds->skill == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>Ancient</em>: <strong>". ($FindSolds->ancient == 0 ? "Nï¿½o" : "").($FindSolds->ancient == 1 ? "+5 Stamina" : "").($FindSolds->ancient == 2 ? "+10 Stamina" : "") ."</strong><br />\n
                                 <em>Option Harmony</em>: <strong>". $LD_History->textHarmonyOption ."</strong><br />\n
                                 <em>Option Level 380</em>: <strong>". $LD_History->textRefineOption ."</strong><br /><br />\n
-                                <em><strong>Opções Excelentes</strong></em>: <br />\n
-                                <em>". $LD_History->NomeOpExc1 ."</em>: <strong>". ($FindSolds->excop1 == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>". $LD_History->NomeOpExc2 ."</em>: <strong>". ($FindSolds->excop2 == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>". $LD_History->NomeOpExc3 ."</em>: <strong>". ($FindSolds->excop3 == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>". $LD_History->NomeOpExc4 ."</em>: <strong>". ($FindSolds->excop4 == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>". $LD_History->NomeOpExc5 ."</em>: <strong>". ($FindSolds->excop5 == "true" ? "Sim" : "Não") ."</strong><br />\n
-                                <em>". $LD_History->NomeOpExc6 ."</em>: <strong>". ($FindSolds->excop6 == "true" ? "Sim" : "Não") ."</strong><br /><br />\n
-                                <em><strong>Opções Sockets</strong></em>: <br />\n
-                                <em>Slot Socket 1</em>: <strong>". ($FindSolds->socket1 == "true" ? "Sim - {$LD_History->socketItemOptionName[0]}" : "Não") ."</strong><br />\n
-                                <em>Slot Socket 2</em>: <strong>". ($FindSolds->socket2 == "true" ? "Sim - {$LD_History->socketItemOptionName[1]}" : "Não") ."</strong><br />\n
-                                <em>Slot Socket 3</em>: <strong>". ($FindSolds->socket3 == "true" ? "Sim - {$LD_History->socketItemOptionName[2]}" : "Não") ."</strong><br />\n
-                                <em>Slot Socket 4</em>: <strong>". ($FindSolds->socket4 == "true" ? "Sim - {$LD_History->socketItemOptionName[3]}" : "Não") ."</strong><br />\n
-                                <em>Slot Socket 5</em>: <strong>". ($FindSolds->socket5 == "true" ? "Sim - {$LD_History->socketItemOptionName[4]}" : "Não") ."</strong><br /><br />\n
-                                <em>Preço pago</em>: <strong>". $FindSolds->price ."</strong>&nbsp;".GOLDNAME."<br />\n
+                                <em><strong>Opï¿½ï¿½es Excelentes</strong></em>: <br />\n
+                                <em>". $LD_History->NomeOpExc1 ."</em>: <strong>". ($FindSolds->excop1 == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>". $LD_History->NomeOpExc2 ."</em>: <strong>". ($FindSolds->excop2 == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>". $LD_History->NomeOpExc3 ."</em>: <strong>". ($FindSolds->excop3 == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>". $LD_History->NomeOpExc4 ."</em>: <strong>". ($FindSolds->excop4 == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>". $LD_History->NomeOpExc5 ."</em>: <strong>". ($FindSolds->excop5 == "true" ? "Sim" : "Nï¿½o") ."</strong><br />\n
+                                <em>". $LD_History->NomeOpExc6 ."</em>: <strong>". ($FindSolds->excop6 == "true" ? "Sim" : "Nï¿½o") ."</strong><br /><br />\n
+                                <em><strong>Opï¿½ï¿½es Sockets</strong></em>: <br />\n
+                                <em>Slot Socket 1</em>: <strong>". ($FindSolds->socket1 == "true" ? "Sim - {$LD_History->socketItemOptionName[0]}" : "Nï¿½o") ."</strong><br />\n
+                                <em>Slot Socket 2</em>: <strong>". ($FindSolds->socket2 == "true" ? "Sim - {$LD_History->socketItemOptionName[1]}" : "Nï¿½o") ."</strong><br />\n
+                                <em>Slot Socket 3</em>: <strong>". ($FindSolds->socket3 == "true" ? "Sim - {$LD_History->socketItemOptionName[2]}" : "Nï¿½o") ."</strong><br />\n
+                                <em>Slot Socket 4</em>: <strong>". ($FindSolds->socket4 == "true" ? "Sim - {$LD_History->socketItemOptionName[3]}" : "Nï¿½o") ."</strong><br />\n
+                                <em>Slot Socket 5</em>: <strong>". ($FindSolds->socket5 == "true" ? "Sim - {$LD_History->socketItemOptionName[4]}" : "Nï¿½o") ."</strong><br /><br />\n
+                                <em>Preï¿½o pago</em>: <strong>". $FindSolds->price ."</strong>&nbsp;".GOLDNAME."<br />\n
                                 <em>Recuperado</em>: <strong>". $FindSolds->recovery ."</strong> vezes<br />\n</div>";
             }
         }
